@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      href="./service-clients.ico"
+      type="image/x-icon"
+    />
+    <title>Weather App</title>
+    <style>
+      .container {
+        text-align: center;
+        background-image: url("./cloud-blue-sky.jpg");
+        max-width: 100%;
+      }
+      .header {
+        display: inline-block;
+        background-color: #fff;
+        box-shadow: 2px 2px 2px #808080;
+        border: 2px solid #fff;
+        opacity: 0.8;
+        border-radius: 15px;
+        padding: 10px;
+        padding-inline-start: 120px;
+        padding-inline-end: 120px;
+      }
+      h1 {
+        color: #0746b2;
+        font-weight: bold;
+      }
+      h1,
+      h2 {
+        font-size: 34px;
+        line-height: 48px;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      .footer h5 {
+        text-align: left;
+        margin-left: 30%;
+        font-size: 18px;
+        opacity: 0.8;
+        font-family: monospace;
+        line-height: 42px;
+      }
+      ul {
+        display: inline-block;
+        text-align: center;
+        list-style-type: none;
+        padding-inline-start: 40px;
+        padding-inline-end: 40px;
+      }
+      li {
+        list-style-type: none;
+        display: block;
+        margin: 0px auto;
+        padding: 0;
+        padding-bottom: 40px;
+        padding-top: 40px;
+        padding-inline-start: 120px;
+        padding-inline-end: 120px;
+        text-align: center;
+        max-width: 400px;
+        border-radius: 20px;
+      }
+      .main {
+        display: inline-block;
+        margin-right: 30%;
+        margin-left: 30%;
+        min-width: 500px;
+        margin: 0 auto;
+        padding-bottom: 30px;
+        border-radius: 25px;
+        background: #fff;
+        box-shadow: 2px 2px 2px #808080;
+        opacity: 0.8;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-size: auto 390px;
+      }
+      li.firstLi {
+        margin-top: 25px;
+      }
+      li:hover {
+        background: #b7d0f585;
+        background-image: linear-gradient(
+          #b7d0f585,
+          rgba(255, 255, 255, 0.829)
+        );
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        border: 1px solid #1a64d6;
+        background: #1a64d6;
+        color: #fff;
+        box-shadow: 2px 2px 2px #808080;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 24px;
+        border-radius: 30px;
+        transition: all 200ms ease;
+        box-shadow: rgb(37 39 89 / 8%) 0px 0px 8px 0;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #fff;
+        color: #1a64d6;
+        box-shadow: 2px 2px 2px #808080;
+      }
+      boutton.btn-warning {
+        box-shadow: 2px 2px 2px #808080;
+      }
+      button#contactMe {
+        margin-right: 250px;
+      }
+      .askForSchoolLink {
+        text-decoration: none;
+        font-weight: 400;
+      }
+      .askForSchoolLink:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .header {
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+      }
+      .footer h3 {
+        font-size: 18px;
+        opacity: 0.7;
+        font-family: monospace;
+      }
+      .min {
+        font-weight: thin;
+      }
+      .max {
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>
+          <span id="emoji">⛅</span><br />
+          Currently <span id="actualCityWeather">14</span>° in
+          <a id="city">Tokyo</a>
+        </h1>
+        <h2>13° / <strong class="max">23°</strong></h2>
+      </div>
+      <hr />
+      <a class="askForSchoolLink">
+        <img
+          src="./informatique.jpeg"
+          alt="Informatique"
+          width="300"
+          class="askForSchoolLink"
+        />
+      </a>
+      <hr />
+      <div>
+        <div class="main">
+          <ul>
+            <li class="firstLi">
+              <strong>🌧️ Tomorrow</strong><br />
+              <span class="min">10°</span> / <span class="max">22°</span>
+            </li>
+            <li>
+              <strong>☁️ Saturday</strong><br />
+              <span class="min">15°</span> / <span class="max">17°</span>
+            </li>
+            <li>
+              <strong>☀️ Sunday</strong><br />
+              <span class="min">25°</span> / <span class="max">28°</span>
+            </li>
+          </ul>
+          <button id="changeCity">Change city</button>
+        </div>
+        <div class="footer">
+          <button class="btn btn-warning" id="contactMe">Contact me</button>
+          <h3>Coded by Jammie Lachance-Côté</h3>
+          <h5>
+            Open code-source;
+            <!--<a href="https//netlify.com/">https:netlife.com/</a>-->
+          </h5>
+        </div>
+      </div>
+    </div>
+    <script>
+      function askForSchool() {
+        let school = "Cégep de Sherbrooke";
+        let programme = "Programmation d'applications";
+        alert(`${programme} from ${school}`);
+        let schoolAttending = prompt(
+          "Are you going to that scool?\nIf yes, type Yes, else type to school where you going."
+        );
+        if (schoolAttending === "Yes" || schoolAttending === "yes") {
+          alert("Great! You're going to Cégep de Sherbrooke.");
+        } else if (schoolAttending.length > 0) {
+          alert(`OK, you're going to ${schoolAttending}`);
+        } else {
+          alert("You're not attending to a school at all.");
+        }
+      }
+      function changeCity() {
+        let cityElement = document.querySelector("#city");
+        let city = prompt("Wich city do you wanna know its weather?");
+        cityElement.innerHTML = city;
+        let actualCityWeatherElement =
+          document.querySelector("#actualCityWeather");
+        let weather = prompt("What is the temperature in this city?");
+        actualCityWeatherElement.innerHTML = weather;
+        let emojiElement = document.querySelector("#emoji");
+        let main = document.querySelector(".main");
+        if (weather <= 0 && weather.lenght > 0) {
+          emojiElement.innerHTML = "🌨️";
+        } else if (weather > 0 && weather < 15 && weather.lenght > 0) {
+          emojiElement.innerHTML = "⛅";
+        } else if (weather.lenght > 0) {
+          emojiElement.innerHTML = "☀️";
+        } else {
+          emojiElement.innerHTML = null;
+        }
+      }
+      function contactMe() {
+        let name = prompt("What is your name?");
+        alert(`Thank you, ${name}!`);
+        let email = prompt(`And what is your email, ${name}?`);
+        alert(`Stay up, we'll write to you at ${email}! 😁`);
+      }
+
+      let changeCityButton = document.querySelector("#changeCity");
+      changeCityButton.addEventListener("click", changeCity);
+      let askForSchoolLink = document.querySelector(".askForSchoolLink");
+      askForSchoolLink.addEventListener("click", askForSchool);
+      let contactButton = document.querySelector("button#contactMe");
+      contactButton.addEventListener("click", contactMe);
+    </script>
+  </body>
+</html>
